@@ -18,8 +18,8 @@ const PROJECTS = [
     tags: ["Python", "FastAPI", "React", "Machine Learning"],
     color: "from-pink-500 to-rose-500",
     icon: "🚗",
-    live: "https://car-price-prediction.vercel.app",
-    github: "",
+    live: "https://car-price-ui.vercel.app/",
+    github: "https://github.com/Sumeet951/Car-Price-Prediction",
   },
   {
     title: "Food Delivery Time Prediction",
