@@ -4,44 +4,92 @@ const NAV_LINKS = ["About", "Projects", "Skills", "Contact"];
 
 const PROJECTS = [
   {
-    title: "AI Chat Dashboard",
-    desc: "A real-time AI-powered chat application with analytics dashboard, built with React and WebSockets.",
-    tags: ["React", "Node.js", "WebSocket", "OpenAI"],
-    color: "from-violet-600 to-indigo-600",
-    icon: "🤖",
-    link: "#",
-  },
-  {
-    title: "E-Commerce Platform",
-    desc: "Full-stack e-commerce solution with payment integration, inventory management, and admin panel.",
-    tags: ["Next.js", "PostgreSQL", "Stripe", "Tailwind"],
+    title: "Job Portal Website",
+    desc: "Full-stack job portal with recruiter dashboard, job posting, authentication, and application tracking.",
+    tags: ["React", "Node.js", "MongoDB", "Redux"],
     color: "from-cyan-500 to-teal-500",
-    icon: "🛒",
-    link: "#",
+    icon: "💼",
+    live: "https://job-portal-mu-ochre.vercel.app/",
+    github: "https://github.com/Sumeet951/Job-Portal",
   },
   {
-    title: "DevOps Monitor",
-    desc: "Cloud infrastructure monitoring tool with real-time alerts, logging, and performance metrics.",
-    tags: ["Python", "Docker", "Grafana", "AWS"],
+    title: "Car Price Prediction",
+    desc: "Machine learning model predicting car prices using Random Forest with FastAPI backend.",
+    tags: ["Python", "FastAPI", "React", "Machine Learning"],
     color: "from-pink-500 to-rose-500",
-    icon: "📊",
-    link: "#",
+    icon: "🚗",
+    live: "https://car-price-prediction.vercel.app",
+    github: "https://github.com/Sumeet951/Car-Price-Prediction",
   },
   {
-    title: "Task Management App",
-    desc: "Collaborative project management tool with kanban boards, real-time sync, and team features.",
-    tags: ["React", "Firebase", "Redux", "TypeScript"],
+    title: "Food Delivery Time Prediction",
+    desc: "ML model predicting food delivery time using Random Forest and deployed with FastAPI.",
+    tags: ["Python", "FastAPI", "Scikit-Learn"],
     color: "from-amber-500 to-orange-500",
-    icon: "✅",
-    link: "#",
+    icon: "🍔",
+    live: "https://food-delivery-time.vercel.app",
+    github: "https://github.com/Sumeet951/Food_Delivery_Time",
   },
 ];
-
 const SKILLS = [
-  { category: "Frontend", icon: "🎨", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js"] },
-  { category: "Backend", icon: "⚙️", items: ["Node.js", "Python", "FastAPI", "GraphQL", "REST APIs"] },
-  { category: "Database", icon: "🗄️", items: ["PostgreSQL", "MongoDB", "Redis", "Prisma", "Firebase"] },
-  { category: "DevOps", icon: "🚀", items: ["Docker", "AWS", "CI/CD", "Kubernetes", "Linux"] },
+  {
+    category: "Frontend",
+    icon: "🎨",
+    items: ["React", "Next.js", "TypeScript", "Tailwind CSS"]
+  },
+  {
+    category: "Backend",
+    icon: "⚙️",
+    items: ["Node.js", "Python", "FastAPI", "REST APIs"]
+  },
+  {
+    category: "Database",
+    icon: "🗄️",
+    items: ["MongoDB", "SQL"]
+  },
+  {
+    category: "AI / ML",
+    icon: "🤖",
+    items: [
+      "Machine Learning",
+      "Deep Learning",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "Model Deployment"
+    ]
+  },
+  {
+    category: "Generative AI",
+    icon: "🧠",
+    items: [
+      "LLMs",
+      "LangChain",
+      "Prompt Engineering",
+      "RAG",
+      "AI Chatbots"
+    ]
+  },
+  {
+    category: "DSA",
+    icon: "💻",
+    items: [
+      "Data Structures",
+      "Algorithms",
+      "Java",
+      "Problem Solving"
+    ]
+  },
+  {
+    category: "Tools",
+    icon: "🛠️",
+    items: [
+      "Git",
+      "GitHub",
+      "Docker",
+      "Vercel",
+    ]
+  }
 ];
 
 function useInView(threshold = 0.15) {
@@ -217,16 +265,15 @@ function About() {
             <div>
               <h3 className="text-2xl font-bold text-white mb-4">Crafting Digital Experiences with Passion</h3>
               <p className="text-gray-400 leading-relaxed mb-4">
-                I'm a full-stack software developer with 3+ years of experience building scalable web applications. I specialize in React and Node.js ecosystems, with a strong focus on performance, accessibility, and clean architecture.
-              </p>
+I’m a passionate full-stack developer who enjoys turning ideas into real, working products. I work mainly with React, Node.js, FastAPI, and MongoDB, and I’m actively building AI-powered applications using modern generative models.              </p>
               <p className="text-gray-400 leading-relaxed mb-8">
                 When I'm not coding, you'll find me contributing to open-source projects, writing technical blogs, or exploring the latest in AI and cloud technologies.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
                   ["📍", "Location", "Mumbai, India"],
-                  ["🎓", "Degree", "B.Tech Computer Science"],
-                  ["💼", "Experience", "3+ Years"],
+                  ["🎓", "Degree", "B.Tech Information Technology"],
+                  ["💼", "Experience", "Fresher"],
                   ["🌐", "Languages", "English, Hindi"],
                 ].map(([icon, label, value]) => (
                   <div key={label} className="bg-gray-800/50 rounded-xl p-3 border border-white/5">
@@ -271,11 +318,29 @@ function Projects() {
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${p.color} flex items-center justify-center text-2xl shadow-lg`}>
                       {p.icon}
                     </div>
-                    <a href={p.link} className="text-gray-600 hover:text-white transition-colors">
-                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                    </a>
+                    <div className="flex gap-3">
+  
+  {/* Live Demo */}
+  <a
+    href={p.live}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-600 hover:text-white transition-colors"
+  >
+    🌐
+  </a>
+
+  {/* GitHub */}
+  <a
+    href={p.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-600 hover:text-white transition-colors"
+  >
+    🐙
+  </a>
+
+</div>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{p.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed mb-4">{p.desc}</p>
@@ -332,7 +397,7 @@ function Skills() {
             </FadeIn>
           ))}
         </div>
-        <FadeIn delay={0.5}>
+        {/* <FadeIn delay={0.5}>
           <div className="mt-16 bg-gray-900 border border-white/5 rounded-2xl p-8">
             <h3 className="text-white font-bold text-center mb-8">Proficiency Overview</h3>
             <div className="grid sm:grid-cols-2 gap-6">
@@ -359,7 +424,7 @@ function Skills() {
               ))}
             </div>
           </div>
-        </FadeIn>
+        </FadeIn> */}
       </div>
     </section>
   );
@@ -386,10 +451,10 @@ function Contact() {
           <FadeIn delay={0.1} className="md:col-span-2">
             <div className="flex flex-col gap-6 h-full justify-center">
               {[
-                ["📧", "Email", "alex@devmail.io"],
+                ["📧", "Email", "sg297979@gmail.com"],
                 ["📍", "Location", "Mumbai, India"],
-                ["💬", "Discord", "@alexdev#0001"],
-                ["🐙", "GitHub", "github.com/alexdev"],
+                // ["💬", "Discord", "@alexdev#0001"],
+                ["🐙", "GitHub", "github.com/Sumeet951"],
               ].map(([icon, label, val]) => (
                 <div key={label} className="flex items-center gap-4 group">
                   <div className="w-11 h-11 bg-gray-800 border border-white/5 rounded-xl flex items-center justify-center text-xl group-hover:border-violet-500/50 transition-colors">{icon}</div>
