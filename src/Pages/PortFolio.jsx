@@ -19,7 +19,7 @@ const PROJECTS = [
     color: "from-pink-500 to-rose-500",
     icon: "🚗",
     live: "https://car-price-prediction.vercel.app",
-    github: "https://github.com/Sumeet951/Food-Delivery-Time-Prediction",
+    github: "",
   },
   {
     title: "Food Delivery Time Prediction",
@@ -28,7 +28,7 @@ const PROJECTS = [
     color: "from-amber-500 to-orange-500",
     icon: "🍔",
     live: "https://food-delivery-time-prediction.vercel.app/",
-    github: "https://github.com/Sumeet951/Food_Delivery_Time",
+    github: "https://github.com/Sumeet951/Food-Delivery-Time-Prediction",
   },
 ];
 const SKILLS = [
