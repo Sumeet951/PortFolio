@@ -19,7 +19,7 @@ const PROJECTS = [
     color: "from-pink-500 to-rose-500",
     icon: "🚗",
     live: "https://car-price-prediction.vercel.app",
-    github: "https://github.com/Sumeet951/Car-Price-Prediction",
+    github: "https://github.com/Sumeet951/Food-Delivery-Time-Prediction",
   },
   {
     title: "Food Delivery Time Prediction",
@@ -27,7 +27,7 @@ const PROJECTS = [
     tags: ["Python", "FastAPI", "Scikit-Learn"],
     color: "from-amber-500 to-orange-500",
     icon: "🍔",
-    live: "https://food-delivery-time.vercel.app",
+    live: "https://food-delivery-time-prediction.vercel.app/",
     github: "https://github.com/Sumeet951/Food_Delivery_Time",
   },
 ];
@@ -514,8 +514,8 @@ function Footer() {
   return (
     <footer className="bg-gray-950 border-t border-white/5 py-8">
       <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <span className="font-mono text-violet-400 text-sm">&lt;AlexDev /&gt;</span>
-        <p className="text-gray-600 text-sm">© 2026 Alex Dev. Built with React & Tailwind CSS.</p>
+        <span className="font-mono text-violet-400 text-sm">&lt;SumeetDev /&gt;</span>
+        <p className="text-gray-600 text-sm">© 2026 Sumeet Dev</p>
         <div className="flex gap-4">
           {["GitHub", "LinkedIn", "Twitter"].map(s => (
             <a key={s} href="#" className="text-gray-600 hover:text-white text-sm transition-colors">{s}</a>
