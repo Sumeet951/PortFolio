@@ -30,7 +30,17 @@ const PROJECTS = [
     live: "https://food-delivery-time-prediction.vercel.app/",
     github: "https://github.com/Sumeet951/Food-Delivery-Time-Prediction",
   },
+ {
+  title: "AI Job Preparation Platform",
+  desc: "An intelligent web app powered by Gemini LLM and MongoDB that helps candidates prepare for jobs by generating tailored resumes, analyzing skill gaps, and providing technical and behavioral interview questions along with a personalized roadmap.",
+  tags: ["React", "Node.js", "FastAPI", "Gemini LLM", "MongoDB", "Machine Learning"],
+  color: "from-green-500 to-emerald-500",
+  icon: "💼",
+  live: "https://ai-job-preparation-web-app.vercel.app/",
+  github: "https://github.com/Sumeet951/AI-JOB-PREPARATION-WEB-APP",
+}
 ];
+
 const SKILLS = [
   {
     category: "Frontend",
